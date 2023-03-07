@@ -6,6 +6,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -75,7 +76,10 @@ public class QRActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(QRActivity.this, result.getText(), Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(QRActivity.this, result.getText(), Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), InfoActivity.class);
+                        intent.putExtra("markerName", result.getText());
+                        startActivity(intent);
                     }
                 });
             }
