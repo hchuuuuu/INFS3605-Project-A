@@ -6,10 +6,15 @@
         <entry key="..\:/Users/henry/OneDrive/Documents/GitHub/INFS3605-Project-A/app/src/main/res/drawable-v24/ic_alternate_email_black_24dp.xml" value="0.1675" />
         <entry key="..\:/Users/henry/OneDrive/Documents/GitHub/INFS3605-Project-A/app/src/main/res/drawable-v24/ic_lock_open_black_24dp.xml" value="0.1675" />
         <entry key="..\:/Users/henry/OneDrive/Documents/GitHub/INFS3605-Project-A/app/src/main/res/drawable-v24/ic_person_outline_black_24dp.xml" value="0.2605" />
+        <entry key="..\:/Users/henry/OneDrive/Documents/GitHub/INFS3605-Project-A/app/src/main/res/drawable/selector.xml" value="0.1675" />
         <entry key="..\:/Users/henry/OneDrive/Documents/GitHub/INFS3605-Project-A/app/src/main/res/layout/activity_login.xml" value="0.21739130434782608" />
         <entry key="..\:/Users/henry/OneDrive/Documents/GitHub/INFS3605-Project-A/app/src/main/res/layout/activity_main.xml" value="0.21739130434782608" />
+        <entry key="..\:/Users/henry/OneDrive/Documents/GitHub/INFS3605-Project-A/app/src/main/res/layout/activity_profile.xml" value="0.15833333333333333" />
+        <entry key="..\:/Users/henry/OneDrive/Documents/GitHub/INFS3605-Project-A/app/src/main/res/layout/activity_qr.xml" value="0.21739130434782608" />
         <entry key="..\:/Users/henry/OneDrive/Documents/GitHub/INFS3605-Project-A/app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="..\:/Users/henry/OneDrive/Documents/GitHub/INFS3605-Project-A/app/src/main/res/layout/activity_register_actiivity.xml" value="0.21739130434782608" />
+        <entry key="..\:/Users/henry/OneDrive/Documents/GitHub/INFS3605-Project-A/app/src/main/res/layout/header.xml" value="0.21739130434782608" />
+        <entry key="..\:/Users/henry/OneDrive/Documents/GitHub/INFS3605-Project-A/app/src/main/res/menu/main_menu.xml" value="0.32135416666666666" />
       </map>
     </option>
   </component>

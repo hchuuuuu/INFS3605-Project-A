@@ -99,6 +99,7 @@
       android:layout_marginStart="32dp"
       android:layout_marginTop="24dp"
       android:layout_marginEnd="32dp"
+      android:backgroundTint="@color/green_900"
       android:text="Sign Up"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
