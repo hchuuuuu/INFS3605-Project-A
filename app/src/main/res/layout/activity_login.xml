@@ -137,9 +137,10 @@
         android:id="@+id/ivLoginLeaf"
         android:layout_width="295dp"
         android:layout_height="240dp"
-        app:srcCompat="@drawable/leaf"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="-2dp" />
+        android:layout_marginStart="130dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/leaf" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
