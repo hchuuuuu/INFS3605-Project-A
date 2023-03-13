@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.example.greentrailapp.Models.Marker;
 import com.google.firebase.database.DatabaseReference;
 
 public class InfoActivity extends AppCompatActivity {
@@ -19,9 +20,8 @@ public class InfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_info);
 
         intentTest = findViewById(R.id.intentTest);
-        Intent intent = getIntent();
-        String str = intent.getStringExtra("markerName");
-        intentTest.setText(str);
+        Marker selectedMarker = getIntent().getParcelableExtra("Marker");
+        intentTest.setText(selectedMarker.getmName());
 
     }
 }
