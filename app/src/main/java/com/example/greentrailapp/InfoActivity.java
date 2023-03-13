@@ -6,9 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+
 public class InfoActivity extends AppCompatActivity {
 
     TextView intentTest;
+    private DatabaseReference fb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
