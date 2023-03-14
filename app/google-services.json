@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "25565446053",
+    "firebase_url": "https://green-trail-app-default-rtdb.firebaseio.com",
     "project_id": "green-trail-app",
     "storage_bucket": "green-trail-app.appspot.com"
   },

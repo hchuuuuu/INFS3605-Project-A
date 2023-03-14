@@ -1,6 +1,7 @@
 package com.example.greentrailapp;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -10,6 +11,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
@@ -17,15 +19,28 @@ import android.widget.Toast;
 import com.budiyev.android.codescanner.CodeScanner;
 import com.budiyev.android.codescanner.CodeScannerView;
 import com.budiyev.android.codescanner.DecodeCallback;
+import com.example.greentrailapp.Models.Marker;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.zxing.Result;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class QRActivity extends AppCompatActivity {
 
     private CodeScanner mCodeScanner;
     private CodeScannerView mCodeScannerView;
     BottomNavigationView nav;
+
+    ArrayList<Marker> markerArrayList;
+    private DatabaseReference fb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +54,27 @@ public class QRActivity extends AppCompatActivity {
         } else {
             startScanning();
         }
+
+
+        fb= FirebaseDatabase.getInstance().getReference("Markers");
+        fb.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                ArrayList<Marker> markers = new ArrayList<Marker>();
+                for (DataSnapshot markerSnapshot : snapshot.getChildren()) {
+                    Marker marker = markerSnapshot.getValue(Marker.class);
+                    markers.add(marker);
+                }
+                markerArrayList = markers;
+                System.out.println(markerArrayList);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
 
         nav = findViewById(R.id.nav);
         nav.setSelectedItemId(R.id.qr);
@@ -65,6 +101,7 @@ public class QRActivity extends AppCompatActivity {
         });
     }
 
+
     private void startScanning() {
 
         mCodeScannerView = findViewById(R.id.scanner_view);
@@ -77,9 +114,20 @@ public class QRActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         //Toast.makeText(QRActivity.this, result.getText(), Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(), InfoActivity.class);
-                        intent.putExtra("markerName", result.getText());
-                        startActivity(intent);
+                        for (Marker marker : markerArrayList){
+                            if(marker.getmName().toLowerCase().contains(result.getText().toLowerCase())){
+                                Intent intent = new Intent(getApplicationContext(), InfoActivity.class);
+                                intent.putExtra("Marker", marker);
+                                startActivity(intent);
+                                break;
+                            }
+                            else {
+                                Toast.makeText(QRActivity.this, "No matching plant found", Toast.LENGTH_SHORT).show();
+                            };
+                        }
+                        //Intent intent = new Intent(getApplicationContext(), InfoActivity.class);
+                        //intent.putExtra("markerName", result.getText());
+                        //startActivity(intent);
                     }
                 });
             }
