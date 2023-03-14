@@ -90,6 +90,9 @@ public class QRActivity extends AppCompatActivity {
                         startActivity(new Intent(QRActivity.this, MainActivity.class));
                         overridePendingTransition(0,0);
                         return true;
+                    case R.id.map:
+                        startActivity(new Intent(QRActivity.this, MapActivity.class));
+                        overridePendingTransition(0,0);
                     case R.id.profile:
                         startActivity(new Intent(QRActivity.this, ProfileActivity.class));
                         overridePendingTransition(0,0);

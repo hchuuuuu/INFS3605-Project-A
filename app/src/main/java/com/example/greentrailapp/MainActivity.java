@@ -51,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, QRActivity.class));
                         overridePendingTransition(0,0);
                         return true;
+                    case R.id.map:
+                        startActivity(new Intent(MainActivity.this, MapActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
                     case R.id.profile:
                         startActivity(new Intent(MainActivity.this, ProfileActivity.class));
                         overridePendingTransition(0,0);

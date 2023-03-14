@@ -10,15 +10,14 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class ProfileActivity extends AppCompatActivity {
+public class MapActivity extends AppCompatActivity {
 
     BottomNavigationView nav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
-        getSupportActionBar().hide();
+        setContentView(R.layout.activity_map);
 
         nav = findViewById(R.id.nav);
         nav.setSelectedItemId(R.id.profile);
@@ -28,17 +27,17 @@ public class ProfileActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                 switch (item.getItemId()){
-                    case R.id.profile:
+                    case R.id.map:
                         return true;
                     case R.id.explore:
-                        startActivity(new Intent(ProfileActivity.this, MainActivity.class));
+                        startActivity(new Intent(MapActivity.this, MainActivity.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.map:
-                        startActivity(new Intent(ProfileActivity.this, MapActivity.class));
+                    case R.id.profile:
+                        startActivity(new Intent(MapActivity.this, ProfileActivity.class));
                         overridePendingTransition(0,0);
                     case R.id.qr:
-                        startActivity(new Intent(ProfileActivity.this, QRActivity.class));
+                        startActivity(new Intent(MapActivity.this, QRActivity.class));
                         overridePendingTransition(0,0);
                         return true;
 
@@ -46,6 +45,5 @@ public class ProfileActivity extends AppCompatActivity {
                 return false;
             }
         });
-
     }
 }
