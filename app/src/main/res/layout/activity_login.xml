@@ -8,21 +8,20 @@
 
     <ImageView
         android:id="@+id/ivLoginBox"
-        android:layout_width="263dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="310dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLogIn"
+        app:layout_constraintTop_toBottomOf="@+id/tvLoginExplanation"
         app:srcCompat="@drawable/text_box" />
 
     <ImageView
         android:id="@+id/ivLoginBox2"
-        android:layout_width="263dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="92dp"
+        android:layout_width="310dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivLoginBox"
@@ -32,11 +31,11 @@
         android:id="@+id/tvLogIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="280dp"
-        android:text="Log In"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="270dp"
+        android:text="Log in"
         android:textColor="#81b69a"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -46,16 +45,14 @@
         android:layout_width="237dp"
         android:layout_height="48dp"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="10dp"
         android:background="@null"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         android:singleLine="false"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/ivLoginBox"
-        app:layout_constraintEnd_toEndOf="@+id/ivLoginBox"
         app:layout_constraintStart_toStartOf="@+id/ivLoginBox"
         app:layout_constraintTop_toTopOf="@+id/ivLoginBox"
         tools:visibility="visible" />
@@ -71,7 +68,7 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:minHeight="48dp"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/ivLoginBox2"
         app:layout_constraintEnd_toEndOf="@+id/ivLoginBox2"
         app:layout_constraintStart_toStartOf="@+id/ivLoginBox2"
@@ -79,11 +76,9 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="100dp"
+        android:layout_width="295dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
         android:backgroundTint="#81b69a"
         android:text="Log In"
         app:cornerRadius="10dp"
@@ -96,9 +91,19 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginTop="20dp"
         android:text="Don't have an account?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvForgotPassword" />
+
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Forgot password?"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
@@ -108,7 +113,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="25dp"
         android:text="Sign up now"
         android:textColor="#81b69a"
         android:textSize="16sp"
@@ -125,6 +129,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/leaf" />
+
+    <TextView
+        android:id="@+id/tvLoginExplanation"
+        android:layout_width="225dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="5dp"
+        android:text="to start your trail journey today!"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/tvLogIn"
+        app:layout_constraintTop_toBottomOf="@+id/tvLogIn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

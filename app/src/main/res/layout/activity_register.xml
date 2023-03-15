@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
+  <ImageView
+      android:id="@+id/ivRegisterLeaf"
+      android:layout_width="295dp"
+      android:layout_height="240dp"
+      android:layout_marginStart="130dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/leaf" />
+
   <TextView
       android:id="@+id/textView"
       android:layout_width="wrap_content"
@@ -14,7 +23,7 @@
       android:layout_marginTop="300dp"
       android:fontFamily="sans-serif"
       android:text="Sign Up"
-      android:textColor="#000000"
+      android:textColor="#81b69a"
       android:textSize="24sp"
       android:textStyle="bold"
       android:typeface="normal"
@@ -31,6 +40,7 @@
       android:inputType="textPersonName"
       android:minHeight="48dp"
       android:textSize="12sp"
+      android:background="@android:color/transparent"
       app:layout_constraintBottom_toBottomOf="@+id/imageView7"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toEndOf="@+id/imageView7"
@@ -47,6 +57,7 @@
       android:inputType="textEmailAddress"
       android:minHeight="48dp"
       android:textSize="12sp"
+      android:background="@android:color/transparent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.5"
       app:layout_constraintStart_toEndOf="@+id/imageView9"
@@ -86,6 +97,7 @@
       android:inputType="textPassword"
       android:minHeight="48dp"
       android:textSize="12sp"
+      android:background="@android:color/transparent"
       app:layout_constraintBottom_toBottomOf="@+id/imageView10"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.5"
@@ -99,8 +111,9 @@
       android:layout_marginStart="32dp"
       android:layout_marginTop="24dp"
       android:layout_marginEnd="32dp"
-      android:backgroundTint="@color/green_900"
+      android:backgroundTint="#81b69a"
       android:text="Sign Up"
+      app:cornerRadius="10dp"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/regPass" />
