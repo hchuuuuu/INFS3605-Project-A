@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/text_box" />
 
     <ImageView
-        android:id="@+id/ivLoginBox2"
+        android:id="@+id/ivPassBox"
         android:layout_width="310dp"
         android:layout_height="60dp"
         android:layout_marginTop="15dp"
@@ -51,7 +51,7 @@
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         android:singleLine="false"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/ivLoginBox"
         app:layout_constraintStart_toStartOf="@+id/ivLoginBox"
         app:layout_constraintTop_toTopOf="@+id/ivLoginBox"
@@ -68,17 +68,19 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:minHeight="48dp"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/ivLoginBox2"
-        app:layout_constraintEnd_toEndOf="@+id/ivLoginBox2"
-        app:layout_constraintStart_toStartOf="@+id/ivLoginBox2"
-        app:layout_constraintTop_toTopOf="@+id/ivLoginBox2" />
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPassBox"
+        app:layout_constraintEnd_toEndOf="@+id/ivPassBox"
+        app:layout_constraintStart_toStartOf="@+id/ivPassBox"
+        app:layout_constraintTop_toTopOf="@+id/ivPassBox" />
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="295dp"
+        android:layout_width="190dp"
         android:layout_height="55dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="25dp"
+        android:layout_marginEnd="50dp"
         android:backgroundTint="#81b69a"
         android:text="Log In"
         app:cornerRadius="10dp"
