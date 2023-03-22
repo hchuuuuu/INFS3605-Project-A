@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background=" #9ec7b2"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tvLetsGetStarted"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="180dp"
         android:text="Let's get started"
-        android:textColor="#81b69a"
+        android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,10 +24,11 @@
         android:id="@+id/tvCaption"
         android:layout_width="329dp"
         android:layout_height="56dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
         android:lineSpacingExtra="5sp"
         android:text="See what the trail has to offer below, or scan a QR code to begin!"
+        android:textColor="@color/white"
         android:textSize="16dp"
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,16 +59,16 @@
 
     <ImageView
         android:id="@+id/ivLeafMain"
-        android:layout_width="194dp"
-        android:layout_height="226dp"
+        android:layout_width="141dp"
+        android:layout_height="170dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/twoleaf" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="189dp"
-        android:layout_height="226dp"
+        android:layout_width="137dp"
+        android:layout_height="171dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/twoleafflipped" />
