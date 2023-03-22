@@ -18,9 +18,10 @@ public class MapActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
+        getSupportActionBar().hide();
 
         nav = findViewById(R.id.nav);
-        nav.setSelectedItemId(R.id.profile);
+        nav.setSelectedItemId(R.id.map);
         //Bottom nav bar navigation
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -36,6 +37,7 @@ public class MapActivity extends AppCompatActivity {
                     case R.id.profile:
                         startActivity(new Intent(MapActivity.this, ProfileActivity.class));
                         overridePendingTransition(0,0);
+                        return true;
                     case R.id.qr:
                         startActivity(new Intent(MapActivity.this, QRActivity.class));
                         overridePendingTransition(0,0);

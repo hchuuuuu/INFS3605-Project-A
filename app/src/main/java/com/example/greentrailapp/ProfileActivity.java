@@ -37,6 +37,7 @@ public class ProfileActivity extends AppCompatActivity {
                     case R.id.map:
                         startActivity(new Intent(ProfileActivity.this, MapActivity.class));
                         overridePendingTransition(0,0);
+                        return true;
                     case R.id.qr:
                         startActivity(new Intent(ProfileActivity.this, QRActivity.class));
                         overridePendingTransition(0,0);
