@@ -33,7 +33,7 @@ public class Marker_RecyclerViewAdapter extends RecyclerView.Adapter<Marker_Recy
         myViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            img = (ImageView)itemView.findViewById(R.id.markerImageView);
+            img = (ImageView)itemView.findViewById(R.id.ivMarker);
             mName = (TextView)itemView.findViewById(R.id.mNameTV);
         }
     }

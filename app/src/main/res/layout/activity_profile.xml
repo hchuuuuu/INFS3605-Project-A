@@ -18,4 +18,102 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/main_menu"/>
 
+    <ImageView
+        android:id="@+id/ivProfileGreen"
+        android:layout_width="857dp"
+        android:layout_height="338dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/greencircle" />
+
+    <ImageView
+        android:id="@+id/ivProfilePicture"
+        android:layout_width="169dp"
+        android:layout_height="177dp"
+        android:layout_marginTop="230dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/greenpfp" />
+
+    <TextView
+        android:id="@+id/tvYouCurrentlyHave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="You currently have"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivProfileGreen" />
+
+    <TextView
+        android:id="@+id/tvPointsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="points!"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPoints" />
+
+    <TextView
+        android:id="@+id/tvPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="00"
+        android:textColor="@color/white"
+        android:textSize="60dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvYouCurrentlyHave" />
+
+    <Button
+        android:id="@+id/btnUpdateDetails"
+        android:layout_width="191dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="Update details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivProfilePicture" />
+
+    <Button
+        android:id="@+id/btnFAQ"
+        android:layout_width="191dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:text="FAQ"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnViewLeaderboard" />
+
+    <Button
+        android:id="@+id/btnLogOut"
+        android:layout_width="191dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:text="Log Out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFAQ" />
+
+    <Button
+        android:id="@+id/btnViewLeaderboard"
+        android:layout_width="191dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:text="View Leaderboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpdateDetails" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
