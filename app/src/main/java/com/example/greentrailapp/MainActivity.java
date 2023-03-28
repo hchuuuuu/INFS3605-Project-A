@@ -14,6 +14,7 @@ import com.example.greentrailapp.Adapters.Marker_RecyclerViewAdapter;
 import com.example.greentrailapp.Models.Marker;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -59,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, ProfileActivity.class));
                         overridePendingTransition(0,0);
                         return true;
-
                 }
                 return false;
             }
@@ -93,6 +93,5 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
     }
 }
