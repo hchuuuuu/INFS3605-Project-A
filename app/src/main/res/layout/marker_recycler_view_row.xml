@@ -22,12 +22,16 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/white">
 
             <ImageView
-                android:id="@+id/markerImageView"
+                android:id="@+id/ivMarker"
                 android:layout_width="100dp"
                 android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -35,30 +39,33 @@
 
             <TextView
                 android:id="@+id/mNameTV"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="32dp"
+                android:layout_width="212dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="16dp"
+                android:fontFamily="sans-serif"
                 android:text="Plant"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toStartOf="@+id/markerImageView"
+                android:textColor="#81b69a"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/ivMarker"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/sourceTV"
-                android:layout_width="170dp"
-                android:layout_height="59dp"
-                android:layout_marginStart="32dp"
+                android:layout_width="249dp"
+                android:layout_height="84dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="32dp"
+                android:layout_marginBottom="10dp"
                 android:text="Basic information goes here"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/markerImageView"
+                app:layout_constraintEnd_toStartOf="@+id/ivMarker"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/mNameTV"
