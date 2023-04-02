@@ -13,11 +13,11 @@ public class Marker implements Parcelable {
 
     protected Marker(Parcel in) {
         mName = in.readString();
-        img_url = in.readString();
         iName = in.readString();
-        geoDistr = in.readString();
         mSciName = in.readString();
+        geoDistr = in.readString();
         tradUses = in.readString();
+        img_url = in.readString();
     }
 
     public static final Creator<Marker> CREATOR = new Creator<Marker>() {
@@ -52,7 +52,9 @@ public class Marker implements Parcelable {
         return tradUses;
     }
 
-    public String getImg_url() {return img_url; }
+    public String getImg_url(){
+        return img_url;
+    }
 
     public void setmName(String mName){
         this.mName = mName;
@@ -84,5 +86,10 @@ public class Marker implements Parcelable {
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(this.mName);
+        parcel.writeString(this.iName);
+        parcel.writeString(this.mSciName);
+        parcel.writeString(this.geoDistr);
+        parcel.writeString(this.tradUses);
+        parcel.writeString(this.img_url);
     }
 }
