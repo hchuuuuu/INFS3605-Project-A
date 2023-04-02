@@ -8,20 +8,19 @@
 
     <ImageView
         android:id="@+id/ivLoginBox"
-        android:layout_width="310dp"
-        android:layout_height="60dp"
+        android:layout_width="313dp"
+        android:layout_height="58dp"
         android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLoginExplanation"
+        app:layout_constraintTop_toBottomOf="@+id/tvLogIn"
         app:srcCompat="@drawable/text_box" />
 
     <ImageView
         android:id="@+id/ivPassBox"
-        android:layout_width="310dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="311dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivLoginBox"
@@ -31,9 +30,9 @@
         android:id="@+id/tvLogIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="270dp"
-        android:text="Log in"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="230dp"
+        android:text="Log In"
         android:textColor="#81b69a"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -42,28 +41,28 @@
 
     <EditText
         android:id="@+id/loginEmail"
-        android:layout_width="237dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="20dp"
-        android:background="@null"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/transparent"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
-        android:singleLine="false"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/ivLoginBox"
+        app:layout_constraintEnd_toEndOf="@+id/ivLoginBox"
         app:layout_constraintStart_toStartOf="@+id/ivLoginBox"
-        app:layout_constraintTop_toTopOf="@+id/ivLoginBox"
-        tools:visibility="visible" />
+        app:layout_constraintTop_toTopOf="@+id/ivLoginBox" />
 
     <EditText
         android:id="@+id/loginPass"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="10dp"
-        android:background="@null"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/transparent"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -76,11 +75,11 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="190dp"
+        android:layout_width="235dp"
         android:layout_height="55dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="#81b69a"
         android:text="Log In"
         app:cornerRadius="10dp"
@@ -90,22 +89,11 @@
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvDontHaveAcc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Don't have an account?"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvForgotPassword" />
-
-    <TextView
-        android:id="@+id/tvForgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Forgot password?"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
@@ -121,7 +109,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDontHaveAcc" />
 
     <ImageView
         android:id="@+id/ivLoginLeaf"
@@ -131,16 +119,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/leaf" />
-
-    <TextView
-        android:id="@+id/tvLoginExplanation"
-        android:layout_width="225dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="5dp"
-        android:text="to start your trail journey today!"
-        android:textStyle="italic"
-        app:layout_constraintStart_toStartOf="@+id/tvLogIn"
-        app:layout_constraintTop_toBottomOf="@+id/tvLogIn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

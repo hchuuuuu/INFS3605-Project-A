@@ -5,7 +5,7 @@ import android.os.Parcelable;
 
 public class Marker implements Parcelable {
 
-    String mName,img_url;
+    String mName,img_url,iName,geoDistr,mSciName,tradUses;
 
     public Marker(){
 
@@ -13,6 +13,10 @@ public class Marker implements Parcelable {
 
     protected Marker(Parcel in) {
         mName = in.readString();
+        iName = in.readString();
+        mSciName = in.readString();
+        geoDistr = in.readString();
+        tradUses = in.readString();
         img_url = in.readString();
     }
 
@@ -32,13 +36,47 @@ public class Marker implements Parcelable {
         return mName;
     }
 
-    public String getImg_url() {return img_url; }
+    public String getiName(){
+        return iName;
+    }
+
+    public String getGeoDistr(){
+        return geoDistr;
+    }
+
+    public String getmSciName(){
+        return mSciName;
+    }
+
+    public String getTradUses(){
+        return tradUses;
+    }
+
+    public String getImg_url(){
+        return img_url;
+    }
 
     public void setmName(String mName){
         this.mName = mName;
     }
 
     public void setImg_url(String img_url) {this.img_url = img_url; }
+
+    public void setiName(String iName){
+        this.iName = iName;
+    }
+
+    public void setGeoDistr(String geoDistr){
+        this.geoDistr = geoDistr;
+    }
+
+    public void setmSciName(String mSciName){
+        this.mSciName = mSciName;
+    }
+
+    public void setTradUses(String tradUses){
+        this.tradUses = tradUses;
+    }
 
     @Override
     public int describeContents() {
@@ -48,5 +86,10 @@ public class Marker implements Parcelable {
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(this.mName);
+        parcel.writeString(this.iName);
+        parcel.writeString(this.mSciName);
+        parcel.writeString(this.geoDistr);
+        parcel.writeString(this.tradUses);
+        parcel.writeString(this.img_url);
     }
 }
