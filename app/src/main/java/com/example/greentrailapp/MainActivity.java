@@ -9,6 +9,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.MenuItem;
+import android.widget.SearchView;
+import android.widget.Toast;
 
 import com.example.greentrailapp.Adapters.Marker_RecyclerViewAdapter;
 import com.example.greentrailapp.Models.Marker;
@@ -22,6 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Marker> markerList;
     RecyclerView markerRecyclerView;
     BottomNavigationView nav;
+    private SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +70,36 @@ public class MainActivity extends AppCompatActivity {
         });
 
         setMarkers();
+
+        //SearchView
+        searchView = findViewById(R.id.searchView);
+        searchView.clearFocus();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                filterList(newText);
+                return true;
+            }
+        });
+    }
+
+    private void filterList(String text) {
+        List<Marker> filteredList = new ArrayList<>();
+        for (Marker marker: markerList){
+            if (marker.getmName().toLowerCase().contains(text.toLowerCase())){
+                filteredList.add(marker);
+            }
+        }
+        if (filteredList.isEmpty()){
+            Toast.makeText(this,"No plants found!", Toast.LENGTH_SHORT).show();
+        } else {
+            marker_recyclerViewAdapter.setFilteredList(filteredList);
+        }
     }
 
     private void setMarkers(){
