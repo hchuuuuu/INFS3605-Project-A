@@ -122,6 +122,7 @@ public class QRActivity extends AppCompatActivity {
                             if(marker.getmName().toLowerCase().contains(result.getText().toLowerCase())){
                                 Intent intent = new Intent(getApplicationContext(), InfoActivity.class);
                                 intent.putExtra("Marker", marker);
+                                intent.putExtra("Visible", "T");
                                 startActivity(intent);
                                 break;
                             }

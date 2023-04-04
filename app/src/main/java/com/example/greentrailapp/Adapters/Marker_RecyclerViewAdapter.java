@@ -65,6 +65,7 @@ public class Marker_RecyclerViewAdapter extends RecyclerView.Adapter<Marker_Recy
 
                 Intent intent = new Intent(context, InfoActivity.class);
                 intent.putExtra("Marker", currentMarker);
+                intent.putExtra("Visible", "F");
                 context.startActivity(intent);
             }
         });

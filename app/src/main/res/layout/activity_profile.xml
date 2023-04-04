@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bglm"
     tools:context=".ProfileActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -16,48 +17,33 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/main_menu"/>
-
-    <ImageView
-        android:id="@+id/ivProfileGreen"
-        android:layout_width="980dp"
-        android:layout_height="311dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/greencircle" />
-
-    <ImageView
-        android:id="@+id/ivProfilePicture"
-        android:layout_width="169dp"
-        android:layout_height="177dp"
-        android:layout_marginTop="180dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/greenpfp" />
+        app:menu="@menu/main_menu" />
 
     <TextView
         android:id="@+id/tvYouCurrentlyHave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="176dp"
+        android:fontFamily="@font/clancyregular"
+        android:gravity="center_vertical"
         android:text="You currently have"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ivProfileGreen" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvPointsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:fontFamily="@font/clancyregular"
         android:text="points!"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPoints" />
 
@@ -66,28 +52,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:fontFamily="sans-serif-medium"
+        android:fontFamily="@font/clancybold"
         android:text="00"
-        android:textColor="@color/white"
-        android:textSize="60dp"
+        android:textColor="@color/green_900"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvYouCurrentlyHave" />
 
     <Button
         android:id="@+id/btnUpdateDetails"
-        android:layout_width="191dp"
+        android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="32dp"
         android:text="Update details"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivProfilePicture" />
+        app:layout_constraintTop_toBottomOf="@+id/PBpoints" />
 
     <Button
         android:id="@+id/btnFAQ"
-        android:layout_width="191dp"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:text="FAQ"
@@ -96,8 +83,8 @@
         app:layout_constraintTop_toBottomOf="@+id/btnViewLeaderboard" />
 
     <Button
-        android:id="@+id/btnLogOut"
-        android:layout_width="191dp"
+        android:id="@+id/btnLogout"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:text="Log Out"
@@ -107,12 +94,23 @@
 
     <Button
         android:id="@+id/btnViewLeaderboard"
-        android:layout_width="191dp"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:text="View Leaderboard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnUpdateDetails" />
+
+    <ProgressBar
+        android:id="@+id/PBpoints"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="5dp"
+        android:progressTint="@color/unsw_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPointsText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
