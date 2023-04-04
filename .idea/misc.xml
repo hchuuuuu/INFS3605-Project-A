@@ -16,20 +16,15 @@
         <entry key="..\:/Users/henry/OneDrive/Documents/GitHub/INFS3605-Project-A/app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="..\:/Users/henry/OneDrive/Documents/GitHub/INFS3605-Project-A/app/src/main/res/layout/activity_register_actiivity.xml" value="0.21739130434782608" />
         <entry key="..\:/Users/henry/OneDrive/Documents/GitHub/INFS3605-Project-A/app/src/main/res/layout/header.xml" value="0.21739130434782608" />
-        <entry key="..\:/Users/henry/OneDrive/Documents/GitHub/INFS3605-Project-A/app/src/main/res/layout/marker_recycler_view_row.xml" value="0.19701086956521738" />
+        <entry key="..\:/Users/henry/OneDrive/Documents/GitHub/INFS3605-Project-A/app/src/main/res/layout/marker_recycler_view_row.xml" value="0.4466666666666667" />
         <entry key="..\:/Users/henry/OneDrive/Documents/GitHub/INFS3605-Project-A/app/src/main/res/menu/main_menu.xml" value="0.32135416666666666" />
-        <entry key="app/src/main/res/layout/activity_info.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_info.xml" value="0.33541666666666664" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.3192281087239583" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3098958333333333" />
-<<<<<<< Updated upstream
-        <entry key="app/src/main/res/layout/activity_map.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_map.xml" value="0.16312056737588654" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/edit_text_border.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/marker_recycler_view_row.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/menu/main_menu.xml" value="0.3098958333333333" />
-=======
->>>>>>> Stashed changes
+        <entry key="app/src/main/res/layout/marker_recycler_view_row.xml" value="0.33541666666666664" />
       </map>
     </option>
   </component>

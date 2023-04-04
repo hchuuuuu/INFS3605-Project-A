@@ -67,7 +67,6 @@ public class ProfileActivity extends AppCompatActivity {
                         startActivity(new Intent(ProfileActivity.this, QRActivity.class));
                         overridePendingTransition(0,0);
                         return true;
-
                 }
                 return false;
             }

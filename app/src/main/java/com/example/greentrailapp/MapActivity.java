@@ -6,19 +6,32 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class MapActivity extends AppCompatActivity {
+public class MapActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener, GoogleMap.OnInfoWindowClickListener {
 
     BottomNavigationView nav;
+    private GoogleMap mMapView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
         getSupportActionBar().hide();
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
 
         nav = findViewById(R.id.nav);
         nav.setSelectedItemId(R.id.map);
@@ -47,5 +60,182 @@ public class MapActivity extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMapView = googleMap;
+
+        //Configure Latitude and Longitude Markers
+        LatLng Plant1 = new LatLng(-33.91723883193311, 151.22642348221527);
+        LatLng Plant2 = new LatLng(-33.91672859728036, 151.22633954932377);
+        LatLng Plant3 = new LatLng(-33.91631373120325, 151.22653743754944);
+        LatLng Plant4 = new LatLng(-33.91580969644949, 151.22657126037217);
+        LatLng Plant5 = new LatLng(-33.9156068954153, 151.226740446537);
+        LatLng Plant6 = new LatLng(-33.91558817529551, 151.22695098931996);
+        LatLng Plant7 = new LatLng(-33.915756656225625, 151.22686827608382);
+        LatLng Plant8 = new LatLng(-33.91613301745093, 151.22812647551302);
+        LatLng Plant9 = new LatLng(-33.917035549106224, 151.23207914508058);
+        LatLng Plant10 = new LatLng(-33.91712103068157, 151.23207195840862);
+        LatLng Plant11 = new LatLng(-33.917276090064505, 151.2320288383768);
+        LatLng Plant12 = new LatLng(-33.91745301645164, 151.2319953005743);
+        LatLng Plant13 = new LatLng(-33.91682482670761, 151.2343261778379);
+        LatLng Plant14 = new LatLng(-33.9164451275022, 151.2343692978697);
+        LatLng Plant15 = new LatLng(-33.916649886970816, 151.23469509366106);
+        LatLng Plant16 = new LatLng(-33.91679301951032, 151.23484361821502);
+        LatLng Plant17 = new LatLng(-33.91833565497455, 151.2345920846968);
+        LatLng Plant18 = new LatLng(-33.91827402960963, 151.23440762678302);
+        LatLng Plant19 = new LatLng(-33.918276017525336, 151.23425431111443);
+        LatLng Plant20 = new LatLng(-33.917783013009725, 151.23210549620737);
+        LatLng Plant21 = new LatLng(-33.91796391419029, 151.2320551895036);
+        LatLng Plant22 = new LatLng(-33.91827601752826, 151.23200727835803);
+        LatLng Plant23 = new LatLng(-33.91708723564837, 151.23010999696564);
+        LatLng Plant24 = new LatLng(-33.917405305999154, 151.23002375690433);
+        LatLng Plant25 = new LatLng(-33.91745699231785, 151.22802825766297);
+
+
+        //Adding the marker on map based on latlng
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant1)
+                .title("Hills Fig")
+                .snippet("Ficus Hilli"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant2)
+                .title("Gymmea Lily")
+                .snippet("Doryanthes Exceisa"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant3)
+                .title("Broad-leaed Paperbark")
+                .snippet("Melaleuca Quinquinervia"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant4)
+                .title("Cromson Bottlebrush")
+                .snippet("Callistemon Citrinus"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant5)
+                .title("Health Banksia")
+                .snippet("Banksia Ericifolia"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant6)
+                .title("Mountain Cedar Wattle")
+                .snippet("Acacia Elata"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant7)
+                .title("Native Mint")
+                .snippet("Prostanthera Ovalifolia"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant8)
+                .title("Tuckeroo")
+                .snippet("Cupaniopsis Anacardioides"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant9)
+                .title("Prickly Leaved Tea Tree")
+                .snippet("Melateuca Styphelioides"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant10)
+                .title("Water Vine")
+                .snippet("Cissus Antartica"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant11)
+                .title("Rock Lily")
+                .snippet("Dendrobium Speciosum"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant12)
+                .title("Sandpaper Fig")
+                .snippet("Ficus Coronata"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant13)
+                .title("Burrawang")
+                .snippet("Macrozamia Communis"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant14)
+                .title("Pulm Pine/Brown Pine")
+                .snippet("Podocarpus Elatus"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant15)
+                .title("Tussock Grass")
+                .snippet("Poa Labilliarderi"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant16)
+                .title("Cabbage Tree Palm")
+                .snippet("Livinstona Australis"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant17)
+                .title("Bolwarra")
+                .snippet("Eupomatia Laurina"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant18)
+                .title("Blue Flax Lily")
+                .snippet("Dianella Caerulea"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant19)
+                .title("Old Man Banksia")
+                .snippet("Banksia Serrata"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant20)
+                .title("Matrush")
+                .snippet("Lomandra Longifolia"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant21)
+                .title("Ribery")
+                .snippet("Syzgium Luehmannii"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant22)
+                .title("Grass Tree")
+                .snippet("Xanthorrhoea Australis"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant23)
+                .title("Native Ginger")
+                .snippet("Alpinia Caerulea"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant24)
+                .title("Flame Tree")
+                .snippet("Barchychiton Acerifolius"));
+
+        mMapView.addMarker(new MarkerOptions()
+                .position(Plant25)
+                .title("Port Jackson Fig")
+                .snippet("Ficus Rubiginosa"));
+
+        //Map will open at this marker position
+        float zoomLevel = 19.0f;
+        mMapView.moveCamera(CameraUpdateFactory.newLatLngZoom(Plant1, zoomLevel));
+
+        mMapView.setOnInfoWindowClickListener(this);
+        mMapView.setOnMarkerClickListener(this);
+    }
+
+    @Override
+    public boolean onMarkerClick(@NonNull Marker marker) {
+        Toast.makeText(this, "Click Plant Name For More Info", Toast.LENGTH_SHORT).show();
+        return false;
+    }
+
+    @Override
+    public void onInfoWindowClick(@NonNull Marker marker) {
+        Intent intent = new Intent(MapActivity.this, InfoActivity.class);
     }
 }
