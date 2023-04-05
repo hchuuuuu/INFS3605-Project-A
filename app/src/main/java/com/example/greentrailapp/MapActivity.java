@@ -18,11 +18,20 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener, GoogleMap.OnInfoWindowClickListener {
 
     BottomNavigationView nav;
     private GoogleMap mMapView;
+    ArrayList<com.example.greentrailapp.Models.Marker> markerArrayList;
+    private DatabaseReference fb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +41,24 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        fb= FirebaseDatabase.getInstance().getReference("Markers");
+        fb.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                ArrayList<com.example.greentrailapp.Models.Marker> markers = new ArrayList<com.example.greentrailapp.Models.Marker>();
+                for (DataSnapshot markerSnapshot : snapshot.getChildren()) {
+                    com.example.greentrailapp.Models.Marker marker = markerSnapshot.getValue(com.example.greentrailapp.Models.Marker.class);
+                    markers.add(marker);
+                }
+                markerArrayList = markers;
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         nav = findViewById(R.id.nav);
         nav.setSelectedItemId(R.id.map);
@@ -102,22 +129,22 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
         mMapView.addMarker(new MarkerOptions()
                 .position(Plant2)
-                .title("Gymmea Lily")
+                .title("Gymea Lily")
                 .snippet("Doryanthes Exceisa"));
 
         mMapView.addMarker(new MarkerOptions()
                 .position(Plant3)
-                .title("Broad-leaed Paperbark")
+                .title("Paperbark")
                 .snippet("Melaleuca Quinquinervia"));
 
         mMapView.addMarker(new MarkerOptions()
                 .position(Plant4)
-                .title("Cromson Bottlebrush")
+                .title("Crimson Bottlebrush")
                 .snippet("Callistemon Citrinus"));
 
         mMapView.addMarker(new MarkerOptions()
                 .position(Plant5)
-                .title("Health Banksia")
+                .title("Banksia")
                 .snippet("Banksia Ericifolia"));
 
         mMapView.addMarker(new MarkerOptions()
@@ -137,7 +164,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
         mMapView.addMarker(new MarkerOptions()
                 .position(Plant9)
-                .title("Prickly Leaved Tea Tree")
+                .title("Prickly-leaved Tea Tree")
                 .snippet("Melateuca Styphelioides"));
 
         mMapView.addMarker(new MarkerOptions()
@@ -162,7 +189,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
         mMapView.addMarker(new MarkerOptions()
                 .position(Plant14)
-                .title("Pulm Pine/Brown Pine")
+                .title("Plum Pine/Brown Pine")
                 .snippet("Podocarpus Elatus"));
 
         mMapView.addMarker(new MarkerOptions()
@@ -182,22 +209,22 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
         mMapView.addMarker(new MarkerOptions()
                 .position(Plant18)
-                .title("Blue Flax Lily")
+                .title("Blue Flax Lily/ Blueberry Lily")
                 .snippet("Dianella Caerulea"));
 
         mMapView.addMarker(new MarkerOptions()
                 .position(Plant19)
-                .title("Old Man Banksia")
+                .title("Saw Banksia/ Old Man Banksia")
                 .snippet("Banksia Serrata"));
 
         mMapView.addMarker(new MarkerOptions()
                 .position(Plant20)
-                .title("Matrush")
+                .title("Spiny-headed Mat-rush")
                 .snippet("Lomandra Longifolia"));
 
         mMapView.addMarker(new MarkerOptions()
                 .position(Plant21)
-                .title("Ribery")
+                .title("Riberry")
                 .snippet("Syzgium Luehmannii"));
 
         mMapView.addMarker(new MarkerOptions()
@@ -212,7 +239,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
         mMapView.addMarker(new MarkerOptions()
                 .position(Plant24)
-                .title("Flame Tree")
+                .title("Illawarra Flame Tree")
                 .snippet("Barchychiton Acerifolius"));
 
         mMapView.addMarker(new MarkerOptions()
@@ -236,6 +263,15 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
     @Override
     public void onInfoWindowClick(@NonNull Marker marker) {
+        for (com.example.greentrailapp.Models.Marker selectedMarker : markerArrayList){
+            if(selectedMarker.getmName().toLowerCase().contains(marker.getTitle().toLowerCase())){
+                Intent intent = new Intent(getApplicationContext(), InfoActivity.class);
+                intent.putExtra("Marker", selectedMarker);
+                intent.putExtra("Visible", "F");
+                startActivity(intent);
+                break;
+            }
+        }
         Intent intent = new Intent(MapActivity.this, InfoActivity.class);
     }
 }
