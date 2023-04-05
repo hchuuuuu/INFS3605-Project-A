@@ -106,6 +106,6 @@ public class InfoActivity extends AppCompatActivity {
 
     private void addProgress(){
         FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                .child("progress").setValue(ServerValue.increment(4.16666666667));
+                .child("progress").setValue(ServerValue.increment(5));
     }
 }

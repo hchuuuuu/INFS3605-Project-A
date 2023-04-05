@@ -66,7 +66,6 @@ public class QRActivity extends AppCompatActivity {
                     markers.add(marker);
                 }
                 markerArrayList = markers;
-                System.out.println(markerArrayList);
             }
 
             @Override
@@ -96,6 +95,10 @@ public class QRActivity extends AppCompatActivity {
                         return true;
                     case R.id.profile:
                         startActivity(new Intent(QRActivity.this, ProfileActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.quiz:
+                        startActivity(new Intent(QRActivity.this, QuizModuleActivity.class));
                         overridePendingTransition(0,0);
                         return true;
 

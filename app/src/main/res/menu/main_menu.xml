@@ -14,6 +14,10 @@
         android:icon="@drawable/ic_pin_drop_fill0_wght400_grad0_opsz48"
         android:title="Map"/>
     <item
+        android:id="@+id/quiz"
+        android:icon="@drawable/ic_quiz_fill0_wght400_grad0_opsz48"
+        android:title="Quiz"/>
+    <item
         android:id="@+id/profile"
         android:icon="@drawable/ic_account_circle_fill0_wght400_grad0_opsz48"
         android:title="Profile"/>

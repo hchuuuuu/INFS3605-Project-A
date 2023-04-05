@@ -64,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, ProfileActivity.class));
                         overridePendingTransition(0,0);
                         return true;
+                    case R.id.quiz:
+                        startActivity(new Intent(MainActivity.this, QuizModuleActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
                 }
                 return false;
             }
