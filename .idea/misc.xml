@@ -22,9 +22,12 @@
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.3192281087239583" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_map.xml" value="0.16312056737588654" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_qr.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/edit_text_border.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/marker_recycler_view_row.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/menu/main_menu.xml" value="0.3098958333333333" />
       </map>
     </option>
   </component>
