@@ -82,7 +82,10 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                         startActivity(new Intent(MapActivity.this, QRActivity.class));
                         overridePendingTransition(0,0);
                         return true;
-
+                    case R.id.quiz:
+                        startActivity(new Intent(MapActivity.this, QuizModuleActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
                 }
                 return false;
             }
