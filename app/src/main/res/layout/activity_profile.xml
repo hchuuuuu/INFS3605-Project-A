@@ -63,16 +63,6 @@
         app:layout_constraintTop_toBottomOf="@+id/tvYouCurrentlyHave" />
 
     <Button
-        android:id="@+id/btnUpdateDetails"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="32dp"
-        android:text="Update details"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PBpoints" />
-
-    <Button
         android:id="@+id/btnFAQ"
         android:layout_width="200dp"
         android:layout_height="50dp"
@@ -80,7 +70,7 @@
         android:text="FAQ"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnViewLeaderboard" />
+        app:layout_constraintTop_toBottomOf="@+id/btnFeedback" />
 
     <Button
         android:id="@+id/btnLogout"
@@ -93,14 +83,14 @@
         app:layout_constraintTop_toBottomOf="@+id/btnFAQ" />
 
     <Button
-        android:id="@+id/btnViewLeaderboard"
+        android:id="@+id/btnFeedback"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="5dp"
-        android:text="View Leaderboard"
+        android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnUpdateDetails" />
+        app:layout_constraintTop_toBottomOf="@+id/PBpoints"
+        tools:text="Feedback" />
 
     <ProgressBar
         android:id="@+id/PBpoints"

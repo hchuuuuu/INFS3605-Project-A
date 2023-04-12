@@ -6,13 +6,18 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.example.greentrailapp.Adapters.Marker_RecyclerViewAdapter;
+import com.example.greentrailapp.Models.ACountryDialog;
+import com.example.greentrailapp.Models.InstructionsDialog;
 import com.example.greentrailapp.Models.Marker;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -33,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Marker> markerList;
     RecyclerView markerRecyclerView;
     BottomNavigationView nav;
+    Button aCountrybtn;
     private SearchView searchView;
 
     @Override
@@ -74,6 +80,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         setMarkers();
+
+        aCountrybtn = findViewById(R.id.aCountrybtn);
+        aCountrybtn.setOnClickListener(view -> {
+            ACountryDialog acountrydialog = new ACountryDialog(MainActivity.this);
+            acountrydialog.setCancelable(false);
+            acountrydialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            acountrydialog.show();
+        });
 
         //SearchView
         searchView = findViewById(R.id.searchView);

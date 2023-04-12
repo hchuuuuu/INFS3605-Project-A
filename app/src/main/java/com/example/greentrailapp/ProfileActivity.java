@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -25,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 public class ProfileActivity extends AppCompatActivity {
 
     BottomNavigationView nav;
-    Button logout;
+    Button logout, faq, feedback;
     TextView progressTV;
     ProgressBar progressBar;
 
@@ -82,6 +83,18 @@ public class ProfileActivity extends AppCompatActivity {
             startActivity(new Intent(ProfileActivity.this, LoginActivity.class));
             Toast.makeText(ProfileActivity.this, "Logged out!", Toast.LENGTH_SHORT).show();
         });
+
+        faq = findViewById(R.id.btnFAQ);
+        faq.setOnClickListener(view -> {
+
+        });
+
+        feedback = findViewById(R.id.btnFeedback);
+        feedback.setOnClickListener(view -> {
+            startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLScAcA2gontye-rXa2g4CJC53JkNaqt19ym35FvUInlg1xTCbw/viewform")));
+        });
+
 
         FirebaseUser user = mAuth.getCurrentUser();
         userReference = FirebaseDatabase.getInstance().getReference("Users");

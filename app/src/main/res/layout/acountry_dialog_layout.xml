@@ -7,11 +7,13 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/unsw_yellow"
         app:cardCornerRadius="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/unsw_yellow"
             android:orientation="vertical"
             android:paddingBottom="20dp">
 
@@ -21,7 +23,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/clancyregular"
                 android:gravity="center"
-                android:text="Instructions"
+                android:text="Acknowledgement of Country"
                 android:textColor="#000000"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -35,16 +37,23 @@
                 android:textAlignment="center"
                 android:textSize="16sp" />
 
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/flags" />
+
             <Button
                 android:id="@+id/closeBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/unsw_yellow"
                 android:paddingStart="50dp"
                 android:paddingEnd="50dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:text="Continue" />
+                android:text="close" />
 
         </LinearLayout>
 

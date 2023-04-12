@@ -11,25 +11,25 @@ import androidx.annotation.NonNull;
 
 import com.example.greentrailapp.R;
 
-public class InstructionsDialog extends Dialog {
-    public InstructionsDialog(@NonNull Context context) {
+public class ACountryDialog extends Dialog{
+    public ACountryDialog(@NonNull Context context) {
         super(context);
     }
     private int instructionPoints = 0;
-    Button continueBtn;
-    TextView instructionsTV;
+    Button closeBtn;
+    TextView aCountryTV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.instructions_dialog_layout);
+        setContentView(R.layout.acountry_dialog_layout);
 
-        continueBtn = findViewById(R.id.closeBtn);
-        instructionsTV = findViewById(R.id.aCountryTV);
+        closeBtn = findViewById(R.id.closeBtn);
+        aCountryTV = findViewById(R.id.aCountryTV);
 
-        setInstructionPoint(instructionsTV, "You will have 30 seconds per question. Every correct answer = 1 point.");
+        setInstructionPoint(aCountryTV, "UNSW is located on the unceded territory of the Bedegal (Kensington campus), Gadigal (City and Paddington Campuses) and Ngunnawal peoples (UNSW Canberra) who are the Traditional Owners of the lands where each campus of UNSW is situated.");
 
-        continueBtn.setOnClickListener(new View.OnClickListener() {
+        closeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dismiss();
