@@ -34,12 +34,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
                 android:textAlignment="center"
                 android:textSize="16sp" />
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/flags" />
 
@@ -50,10 +52,11 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="20dp"
-                android:backgroundTint="@color/unsw_yellow"
+                android:backgroundTint="@color/unsw_grey"
                 android:paddingStart="50dp"
                 android:paddingEnd="50dp"
-                android:text="close" />
+                android:text="close"
+                android:textColor="@color/white" />
 
         </LinearLayout>
 
