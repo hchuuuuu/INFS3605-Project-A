@@ -79,8 +79,9 @@
         android:layout_marginTop="5dp"
         android:text="Log Out"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFAQ" />
+        app:layout_constraintTop_toBottomOf="@+id/tutBtn" />
 
     <Button
         android:id="@+id/btnFeedback"
@@ -91,6 +92,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PBpoints" />
+
+    <Button
+        android:id="@+id/tutBtn"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:text="Tutorial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFAQ" />
 
     <ProgressBar
         android:id="@+id/PBpoints"

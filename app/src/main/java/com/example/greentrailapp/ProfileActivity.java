@@ -26,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 public class ProfileActivity extends AppCompatActivity {
 
     BottomNavigationView nav;
-    Button logout, faq, feedback;
+    Button logout, faq, feedback, tutorial;
     TextView progressTV;
     ProgressBar progressBar;
 
@@ -86,13 +86,18 @@ public class ProfileActivity extends AppCompatActivity {
 
         faq = findViewById(R.id.btnFAQ);
         faq.setOnClickListener(view -> {
-
+        startActivity(new Intent(ProfileActivity.this, FaqActivity.class));
         });
 
         feedback = findViewById(R.id.btnFeedback);
         feedback.setOnClickListener(view -> {
             startActivity(new Intent(Intent.ACTION_VIEW,
                     Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLScAcA2gontye-rXa2g4CJC53JkNaqt19ym35FvUInlg1xTCbw/viewform")));
+        });
+
+        tutorial = findViewById(R.id.tutBtn);
+        tutorial.setOnClickListener(view -> {
+            startActivity(new Intent(ProfileActivity.this, TutorialActivity.class));
         });
 
 

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bglm"
+    tools:context=".FaqActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="40dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/clancybold"
+                android:text="FAQ"
+                android:textSize="34sp" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center_horizontal"
+                android:text="General Information on the Trail"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="Initally created in the early 2000s, the UNSW Bush Tucker Trail (previously known as a the Green Trail) is a 24-stop or plant long trail starting from beside the Roundhouse and spreading across both lower and upper campus. The trail gives UNSW students, staff and visitors the opportunity to explore our campus, whilst learning a little about various bushfoods and their indignous significance, as well as the biodiversity of the Kensington Area.  You can choose to navigate the trail as a whole, in smaller sections, or seek out individually plants - however, we recommend completing it as a whole to mazimise your experience! Each of the 24 plants on the trail are signposted to make them easier to identify and have additional information here on the Bush Tucker Trail app. "
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="What is “Bush Tucker” and why was the trail re-named?"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="“Bush Tucker” refers to all Australian native foods. Here on the UNSW Bush Tucker Trail, we focus on various plants, that are Native to the Kensington Area.  The trail was re-branded from Green Trail to the Bush Tucker trail based on discussions with Indigenous/First Nations staff and students.  "
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="1) How does the rewards system work?"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="By exploring the plants (scanning the QR codes!) and completing the quiz you are able to collect points which you can save up to redeem rewards! Rewards include vouchers to some of the best foodspots on campus and discounts at the Uni Shop!" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="2) What is this app for?"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="The UNSW Bush Tucker Trail app aims to educate students and the local community about Indigenous flora. On top of this, users are able to utilise this app however they please, whether it be for a mental health break, or to gain a stronger connection to Indigenous Australian culture!" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="3) Can I use the app when I’m not at the Green Trail?"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="Of course! You'll be able to access the app outside of the Green Trail. You will be able to access the plant database and read their descriptions. However, users will need to go to the Green Trail to access the QR code scanner to scan the plants and gain points." />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="4) Who should I contact for enquiries? "
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="Either fill out our feedback form, or please contact Professor Daniel Robinson at d.robinson@unsw.edu.au. " />
+
+            <Button
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:paddingTop="4dp"
+                android:text="Go back" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
