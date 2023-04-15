@@ -14,8 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/clancybold"
-        android:text="Let's get started."
-        android:textColor="@color/black"
+        android:text="Let's get started"
+        android:textColor="#81b69a"
         android:textSize="30sp"
         android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +34,7 @@
         android:text="See what the trail has to offer below, or scan a QR code to begin!"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="16dp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLetsGetStarted" />
@@ -60,6 +60,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="40dp"
+        android:layout_marginBottom="105dp"
         app:layout_constraintBottom_toTopOf="@+id/nav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +71,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="40dp"
         android:background="@drawable/search_view_bg"
         android:iconifiedByDefault="false"
@@ -78,18 +79,29 @@
         android:queryHint="Find a plant..."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/aCountrybtn" />
+        app:layout_constraintTop_toBottomOf="@+id/tvCaption" />
 
     <Button
         android:id="@+id/aCountrybtn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="215dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="40dp"
         android:text="Acknowledgement of Country"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivUNSWLogo"
+        app:layout_constraintTop_toBottomOf="@+id/markerRecyclerView" />
+
+    <ImageView
+        android:id="@+id/ivUNSWLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="Set"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCaption" />
+        app:layout_constraintTop_toBottomOf="@+id/markerRecyclerView"
+        app:srcCompat="@drawable/unswlogo_square" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
