@@ -85,6 +85,7 @@
         android:layout_marginEnd="32dp"
         android:backgroundTint="#81b69a"
         android:text="Log In"
+        android:textColor="@color/white"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

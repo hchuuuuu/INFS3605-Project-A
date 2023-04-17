@@ -16,7 +16,7 @@ public class FaqActivity extends AppCompatActivity {
         setContentView(R.layout.activity_faq);
         getSupportActionBar().hide();
 
-        back = findViewById(R.id.backBtn);
+        back = findViewById(R.id.btnBack);
         back.setOnClickListener(view ->{
             startActivity(new Intent(FaqActivity.this, ProfileActivity.class));
         });

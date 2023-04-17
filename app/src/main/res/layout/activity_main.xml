@@ -12,7 +12,7 @@
         android:id="@+id/tvLetsGetStarted"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="25dp"
         android:fontFamily="@font/clancybold"
         android:text="Let's get started"
         android:textColor="#81b69a"
@@ -24,10 +24,10 @@
 
     <TextView
         android:id="@+id/tvCaption"
-        android:layout_width="0dp"
-        android:layout_height="56dp"
+        android:layout_width="339dp"
+        android:layout_height="57dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/roboto_mono"
         android:lineSpacingExtra="0sp"
@@ -55,13 +55,11 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/markerRecyclerView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="324dp"
+        android:layout_height="283dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="105dp"
-        app:layout_constraintBottom_toTopOf="@+id/nav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchView" />
@@ -89,9 +87,11 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="40dp"
         android:text="Acknowledgement of Country"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ivUNSWLogo"
-        app:layout_constraintTop_toBottomOf="@+id/markerRecyclerView" />
+        app:layout_constraintTop_toBottomOf="@+id/markerRecyclerView"
+        tools:ignore="TextContrastCheck" />
 
     <ImageView
         android:id="@+id/ivUNSWLogo"

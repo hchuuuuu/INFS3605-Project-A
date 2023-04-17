@@ -11,7 +11,7 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,8 +39,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="32dp"
-        android:text="You've completed the UNSW Bush Trail Quiz."
+        android:text="You've completed the UNSW Bush Trail Quiz"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +54,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:text="YOUR SCORE:"
+        android:text="YOU SCORED"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +79,8 @@
             android:layout_height="wrap_content"
             android:letterSpacing=".2"
             android:text="0"
-            android:textSize="24sp"
+            android:textColor="@color/unsw_green"
+            android:textSize="28sp"
             android:textStyle="bold" />
 
         <TextView
@@ -87,7 +89,8 @@
             android:layout_height="wrap_content"
             android:letterSpacing=".2"
             android:text="/10"
-            android:textSize="24sp"
+            android:textColor="@color/unsw_green"
+            android:textSize="28sp"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -167,7 +170,8 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_weight="1"
-            android:text="Share Result" />
+            android:text="Share Result"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/retakeBtn"
@@ -176,7 +180,8 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_weight="1"
-            android:text="Retake Quiz" />
+            android:text="Retake Quiz"
+            android:textColor="@color/white" />
     </LinearLayout>
 
     <Button
@@ -186,7 +191,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="20dp"
-        android:text="Back to learning"
+        android:text="Return to learning"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
