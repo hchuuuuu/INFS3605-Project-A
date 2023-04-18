@@ -56,10 +56,12 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/markerRecyclerView"
         android:layout_width="324dp"
-        android:layout_height="283dp"
+        android:layout_height="0dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/ivUNSWLogo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchView" />
@@ -82,26 +84,29 @@
     <Button
         android:id="@+id/aCountrybtn"
         android:layout_width="215dp"
-        android:layout_height="65dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="40dp"
+        android:layout_marginBottom="16dp"
         android:text="Acknowledgement of Country"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/nav"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/ivUNSWLogo"
         app:layout_constraintTop_toBottomOf="@+id/markerRecyclerView"
         tools:ignore="TextContrastCheck" />
 
     <ImageView
         android:id="@+id/ivUNSWLogo"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="51dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="16dp"
         android:contentDescription="Set"
+        app:layout_constraintBottom_toTopOf="@+id/nav"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/markerRecyclerView"
         app:srcCompat="@drawable/unswlogo_square" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
